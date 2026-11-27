@@ -1,10 +1,11 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Project Information -->
     <groupId>com.example</groupId>
     <artifactId>myproject</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -13,12 +14,14 @@
     <name>myproject</name>
     <url>https://maven.apache.org</url>
 
+    <!-- Java Configuration -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -28,5 +31,23 @@
         </dependency>
     </dependencies>
 
-</project>
+    <!-- Nexus Repository Configuration -->
+    <distributionManagement>
 
+        <!-- Release Repository -->
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://3.87.210.226:8081/repository/maven-releases/</url>
+        </repository>
+
+        <!-- Snapshot Repository -->
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://3.87.210.226:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+
+</project>
