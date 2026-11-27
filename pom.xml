@@ -24,7 +24,6 @@
 
     <!-- Dependencies -->
     <dependencies>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -39,13 +38,11 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <!-- Build Configuration -->
     <build>
         <finalName>myproject</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,7 +57,6 @@
 
     <!-- Nexus Repository Configuration -->
     <distributionManagement>
-
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Release Repository</name>
@@ -72,7 +68,6 @@
             <name>Nexus Snapshot Repository</name>
             <url>http://3.87.210.226:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
-
     </distributionManagement>
 
 </project>
